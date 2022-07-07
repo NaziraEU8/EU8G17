@@ -22,4 +22,8 @@ public class BasePage {
 
     @FindBy(xpath= "//button[.='Log in']")
     public WebElement loginButton;
+
+
+    @FindBy(xpath ="//*[@id=\"oe_main_menu_navbar\"]/div[2]/ul[1]/li[16]/a/span" )
+    public WebElement employeeButton;
 }
