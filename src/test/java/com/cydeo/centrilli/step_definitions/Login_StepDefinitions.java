@@ -1,35 +1,48 @@
 package com.cydeo.centrilli.step_definitions;
 
 import com.cydeo.centrilli.page.BasePage;
+import com.cydeo.centrilli.page.LoginPage;
 import com.cydeo.centrilli.utilities.ConfigurationReader;
 import com.cydeo.centrilli.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Login_StepDefinitions {
 
-    BasePage basePage = new BasePage();
+    LoginPage loginPage=new LoginPage();
 
-    @Given("User is on login page")
-    public void user_is_on_login_page() {
-
+    @Given("user is in login page")
+    public void userIsInLoginPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-
     }
 
 
-    @Given("user is entering valid credentials")
-    public void userIsEnteringValidCredentials() {
+    @When("user enters username {string} and password {string}")
+    public void userEntersUsernameAndPassword(String username, String password) {
 
         //entering email in input box from configuration properties files
-        basePage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email"));
-
+        loginPage.emailInputBox.sendKeys(username);
         //entering passowrd in input box for cr
-        basePage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password"));
+        loginPage.passwordInputBox.sendKeys(password);
 
-        //clicking login button
-        basePage.loginButton.click();
 
     }
+
+    @And("user click login button")
+    public void userClickLoginButton() {
+        //clicking login button
+        loginPage.loginButton.click();
+    }
+
+    @Then("user should see the title #inbox - Odoo")
+    public void userShouldSeeTheTitleInboxOdoo() {
+        Assert.assertTrue(Driver.getDriver().getTitle().equals("Odoo"));
+    }
+
+
 }
 
 
