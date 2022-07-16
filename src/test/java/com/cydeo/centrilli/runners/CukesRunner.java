@@ -20,6 +20,7 @@ import org.junit.runner.RunWith;
         glue = "com/cydeo/centrilli/step_definitions",
         dryRun = false,
         tags = "@"
+
 )
 public class CukesRunner {
 }
