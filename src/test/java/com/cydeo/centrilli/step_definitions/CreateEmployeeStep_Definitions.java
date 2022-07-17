@@ -18,7 +18,7 @@ public class CreateEmployeeStep_Definitions {
     Faker faker = new Faker();
     String name = faker.name().fullName();
 
-    @And("user fills all the fields")
+    @And("user fills all the fields in employee")
     public void userFillsAllTheFields() {
 
 
@@ -89,7 +89,7 @@ public class CreateEmployeeStep_Definitions {
 
     }
 
-    @And("user clicks save button")
+    @And("user clicks save button in employee")
     public void userClicksSaveButton() {
         createEmployeePage.saveButton.click();
         BrowserUtils.sleep(5);
@@ -102,7 +102,7 @@ public class CreateEmployeeStep_Definitions {
         Assert.assertEquals(expectedTitle, Driver.getDriver().getTitle());
     }
 
-    @And("user fills minimum requirement field")
+    @And("user fills minimum requirement field in employee")
     public void userFillsMinimumRequirementField() {
 
         createEmployeePage.nameInput.sendKeys(name);
