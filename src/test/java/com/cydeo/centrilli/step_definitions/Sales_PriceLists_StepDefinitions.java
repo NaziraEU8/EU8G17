@@ -51,8 +51,8 @@ public class Sales_PriceLists_StepDefinitions {
         salesPriceListsPage.priceListsButton.click();
     }
 
-    @When("user clicks on create button on orders")
-    public void userClicksOnCreateButtonOnOrders() {
+    @When("user clicks on create button on pricelists")
+    public void userClicksOnCreateButtonOnPricelists() {
         BrowserUtils.sleep(2);
         salesPriceListsPage.createButtonPriceLists.click();
     }
@@ -79,5 +79,66 @@ public class Sales_PriceLists_StepDefinitions {
     public void userShouldBeAbleToSaveNewPricelist() {
         BrowserUtils.sleep(2);
         Assert.assertTrue(Driver.getDriver().getPageSource().contains(fullName));
+    }
+
+    @When("user clicks on kanban button on pricelists")
+    public void userClicksOnKanbanButtonOnPricelists() {
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.kanbanButton.click();
+        
+    }
+
+    @Then("user should be able to see kanban view")
+    public void userShouldBeAbleToSeeKanbanView() {
+        BrowserUtils.sleep(2);
+        Assert.assertTrue(salesPriceListsPage.kanbanButton.isEnabled());
+
+
+    }
+
+    @When("user clicks on list button on pricelists")
+    public void userClicksOnListButtonOnPricelists() {
+
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.listButton.click();
+        
+    }
+
+    @Then("user should be able to see list view")
+    public void userShouldBeAbleToSeeListView() {
+
+        BrowserUtils.sleep(2);
+        Assert.assertTrue(salesPriceListsPage.listButton.isEnabled());
+    }
+
+    @And("user fills minimum requirement field on pricelists")
+    public void userFillsMinimumRequirementFieldOnPricelists() {
+
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.nameInputBox.sendKeys(fullName);
+    }
+
+    @And("user clicks on discard button")
+    public void userClicksOnDiscardButton() {
+
+        salesPriceListsPage.discardButton.click();
+        
+    }
+
+    @And("user clicks ok on the warning message")
+    public void userClicksOkOnTheWarningMessage() {
+        
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.okWarningButton.click();
+    }
+
+    @Then("user is able to discard changes")
+    public void userIsAbleToDiscardChanges() {
+
+        //when user discard the changes save button turns to create button so
+        // i need to verify if save button is displayed
+
+        BrowserUtils.sleep(2);
+        Assert.assertTrue(salesPriceListsPage.newSaveButton.isDisplayed());
     }
 }
