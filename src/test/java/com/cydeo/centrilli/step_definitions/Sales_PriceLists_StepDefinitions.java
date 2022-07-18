@@ -28,8 +28,8 @@ public class Sales_PriceLists_StepDefinitions {
     public void userEntersUsernameAndPasswordAsSalesManager() {
 
 
-        loginPage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email2"));
-        loginPage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password2"));
+        loginPage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email"));
+        loginPage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password"));
         loginPage.loginButton.click();
 
 
