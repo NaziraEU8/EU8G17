@@ -19,4 +19,38 @@ public class LoginPage {
 
     @FindBy(xpath= "//button[.='Log in']")
     public WebElement loginButton;
+
+
+    //saadet login information
+    @FindBy(xpath = "//input[@id='login']")
+    public WebElement usernameBox;
+
+    @FindBy(id="password")
+    public WebElement passwordBox;
+
+    @FindBy(xpath = "//button[.=\"Log in\"]")
+    public WebElement submit;
+
+    @FindBy(xpath = "//li[.='#Inbox']")
+    public WebElement inboxSubTitle;
+
+
+/*
+
+    public void login(String username, String password) {
+        usernameBox.sendKeys(username);
+        passwordBox.sendKeys(password);
+        submit.submit();
+    }
+*/
+
+
+
+
+
+
+
+
+
+
 }
