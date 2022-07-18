@@ -12,3 +12,11 @@ Feature: Centrilli app login feature
     When user enters username "posmanager105@info.com" and password "posmanager"
     And  user click login button
     Then user should see the title #inbox - Odoo
+
+
+
+    # saadet, i used configuration.properties
+  Scenario: The user should be logged in with valid credentials
+    When  the user is on the login page
+    And   the user logins with valid username and password
+    Then  the user sees the dashboard

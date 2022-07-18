@@ -27,4 +27,10 @@ public class BasePage {
 
     @FindBy(xpath = "//span[.='Inbox']")
     public WebElement inboxButton;
+
+    @FindBy(xpath = "//span[.='\n" +
+            "                Sales\n" +
+            "            ']")
+    public WebElement salesModule;
+
 }
