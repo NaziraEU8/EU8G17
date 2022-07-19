@@ -23,8 +23,7 @@ public class PointOfSale_StepDefinitions {
     }
     @Given("user clicks on Point of Sale")
     public void user_clicks_on_point_of_sale() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
     @Given("User sees create button in the dashboard")
     public void user_sees_create_button_in_the_dashboard() {
