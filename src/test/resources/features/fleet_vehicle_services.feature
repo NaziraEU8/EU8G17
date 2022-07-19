@@ -8,7 +8,7 @@ Feature: Centrilli app vehicles services log feature
     Given user should see inbox page
     Then user click in Fleet module
 
-
+@wip
   Scenario: create new Vehicle Service Log
     When user click in create button
     And User fill the field with information

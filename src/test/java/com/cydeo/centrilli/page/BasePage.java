@@ -33,4 +33,7 @@ public class BasePage {
             "            ']")
     public WebElement salesModule;
 
+    @FindBy(xpath = "//span[contains(text(),'CRM')]")
+    public WebElement CRMModule;
+
 }

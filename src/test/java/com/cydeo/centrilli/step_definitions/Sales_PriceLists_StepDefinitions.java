@@ -28,8 +28,8 @@ public class Sales_PriceLists_StepDefinitions {
     public void userEntersUsernameAndPasswordAsSalesManager() {
 
 
-        loginPage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email2"));
-        loginPage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password2"));
+        loginPage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email"));
+        loginPage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password"));
         loginPage.loginButton.click();
 
 
@@ -140,5 +140,46 @@ public class Sales_PriceLists_StepDefinitions {
 
         BrowserUtils.sleep(2);
         Assert.assertTrue(salesPriceListsPage.newSaveButton.isDisplayed());
+    }
+    private  static  int totalNumberOfPriceLists;
+    @When("user clicks on an existing pricelist")
+    public void userClicksOnAnExistingPricelist() {
+        BrowserUtils.sleep(2);
+        // will give me the total number of pricelists so i can use it to compare after i delete a pricelist
+        totalNumberOfPriceLists = salesPriceListsPage.selectPriceList.size();
+        // will select a random from the whole price list
+        salesPriceListsPage.selectRandomWebElement(salesPriceListsPage.selectPriceList).click();
+    }
+
+    @And("user clicks on action button")
+    public void userClicksOnActionButton() {
+        
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.actionButton.click();
+    }
+
+    @And("user clicks on delete dropdown button")
+    public void userClicksOnDeleteDropdownButton() {
+
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.deleteButton.click();
+    }
+
+    @And("user confirms prompting dialog")
+    public void userConfirmsPromptingDialog() {
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.okDeleteButton.click();
+    }
+
+    @Then("user should be able to delete pricelist successfully")
+    public void userShouldBeAbleToDeletePricelistSuccessfully() {
+
+        BrowserUtils.sleep(2);
+        salesPriceListsPage.priceListsButton.click();
+        BrowserUtils.sleep(2);
+        //verifying by comparing the total number of pricelists before and after deleting
+
+        Assert.assertNotEquals(totalNumberOfPriceLists,salesPriceListsPage.selectPriceList.size());
+
     }
 }

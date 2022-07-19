@@ -75,6 +75,21 @@ public class Sales_PriceListsPage {
     @FindBy (xpath = "//div[1]/div[2]/div[1]/div[2]/div[1]/div/button[1]")
     public  WebElement newSaveButton;
 
+    @FindBy(xpath = "//div[1]/div[2]/div[2]//div/table/tbody/tr/td[3]")
+    public List<WebElement> selectPriceList;
+
+
+    @FindBy(xpath = "//div[1]/div[2]/div[1]/div[2]/div[2]//div[3]/button")
+    public  WebElement actionButton;
+
+
+    @FindBy(xpath = "//div[1]/div[2]/div[1]/div[2]/div[2]//div[3]/ul/li[1]/a")
+    public  WebElement deleteButton;
+
+
+    @FindBy(xpath = "//div[5]//div[3]/button[1]/span")
+    public WebElement okDeleteButton;
+
 
 
 }

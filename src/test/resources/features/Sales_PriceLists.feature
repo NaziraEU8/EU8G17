@@ -22,7 +22,7 @@ Feature: POS Manager should be able to create SALES / PRICE LISTS
     Then user should be able to see list view
 
 
-  @fation
+
   Scenario: Verify that the user can discard changes
     When user clicks on create button on pricelists
     And user fills minimum requirement field on pricelists
@@ -31,7 +31,7 @@ Feature: POS Manager should be able to create SALES / PRICE LISTS
     Then user is able to discard changes
 
 
-
+  @fation
   Scenario: Verify that the user can edit ORDERS
     When user clicks on an existing pricelist
     And user clicks on action button
