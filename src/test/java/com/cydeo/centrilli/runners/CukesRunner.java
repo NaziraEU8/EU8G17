@@ -23,7 +23,7 @@ import org.junit.runner.RunWith;
         glue = "com/cydeo/centrilli/step_definitions",
         dryRun = false,
  
-        tags = "@fation"
+        tags = "@taulant"
 
 )
 public class CukesRunner {
