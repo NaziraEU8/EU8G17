@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Fleet_Vehicle_Services_StepDefinitions {
+public class  Fleet_Vehicle_Services_StepDefinitions {
    VehicleServicesCreatePage vehicleServicesCreatePage=new VehicleServicesCreatePage();
    Faker faker=new Faker();
 
