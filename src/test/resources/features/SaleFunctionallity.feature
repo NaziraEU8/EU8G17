@@ -13,13 +13,13 @@ Feature:Sale Functionality
                 homepage stage
     Given user is on "sale" dashboard
    Then  user clicks on customer module
-    And user clicks on list button
+    And user clicks on list button for customers
     Then user should be able to see listed customers
-    And user clicks on kanban button
+    And user clicks on kanban button for customers
     Then user should be able to see listed customers from kanban
-    And user clicks on forward and backward button
+    And user clicks on forward and backward button for customers
     Then user should be able to see listed customers
-    And user click on search input box
+    And user click on search input box for customers
     And user search for "Anna" and presses enter
     Then user should be able to se Anna customer listed
 
@@ -28,8 +28,8 @@ Feature:Sale Functionality
 
     When user clicks on customer button
     Then user clicks create button
-    And user fills all the fields
-    And user clicks save button
+    And user fills all the fields for customer
+    And user clicks save button for new customer created
     Then user should see the new created customer from Sale module
 
 
@@ -52,11 +52,11 @@ Feature:Sale Functionality
     Given user is on "sale" dashboard
     When user clicks on costumer module
     Then user clicks create button
-    And user fills minimum requirement field
+    And user fills minimum requirement field for customer
     And user clicks save button
     Then user should be able to see the title change to customer name
 
-@test
+
     Scenario: User should be able to import a file
       When user clicks import button
       And user clicks load a file button

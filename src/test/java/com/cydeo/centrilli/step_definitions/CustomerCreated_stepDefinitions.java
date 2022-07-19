@@ -33,7 +33,7 @@ public class CustomerCreated_stepDefinitions {
 
  }
 
- @Then("user fills all the fields")
+ @Then("user fills all the fields for customer")
  public void user_fills_all_the_fields() {
   //send full name
 
@@ -51,7 +51,7 @@ public class CustomerCreated_stepDefinitions {
 
  }
 
- @Then("user clicks save button")
+ @Then("user clicks save button for new customer created")
  public void user_clicks_save_button() {
  customerCreatePage.saveButton.click();
   BrowserUtils.sleep(5);
@@ -138,7 +138,7 @@ public class CustomerCreated_stepDefinitions {
  }
 
 
- @And("user fills minimum requirement field")
+ @And("user fills minimum requirement field for customer")
  public void userFillsMinimumRequirementField() {
   //send full name
   customerCreatePage.createButton.click();

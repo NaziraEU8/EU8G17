@@ -37,9 +37,6 @@ public class SaleFunctionallityPage {
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div/div/div/table/thead/tr/th[2]")
     public WebElement listButton;
 
-   // @FindBy(xpath = "//tr/th[.='Name']")
-   // public WebElement listDisplayed;
-
     @FindBy(xpath = "//button[@data-original-title='Kanban']")
     public WebElement kanbanButton;
 

@@ -1,6 +1,7 @@
 package com.cydeo.centrilli.step_definitions;
 
 
+import com.cydeo.centrilli.page.EmployeeButtonPage;
 import com.cydeo.centrilli.page.SaleFunctionallityPage;
 import com.cydeo.centrilli.utilities.BrowserUtils;
 import com.cydeo.centrilli.utilities.ConfigurationReader;
@@ -15,22 +16,23 @@ import org.openqa.selenium.Keys;
 
 public class SaleFunctionallity_stepDefinitions {
     SaleFunctionallityPage sale = new SaleFunctionallityPage();
+    EmployeeButtonPage sale2= new EmployeeButtonPage();
     Faker faker = new Faker();
     String name = faker.name().fullName();
 
 
-    @Given("user is on the centrilli login page")
-    public void userIsOnTheCentrilliLoginPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
+  //  @Given("user is on the centrilli login page")
+ //   public void userIsOnTheCentrilliLoginPage() {
+     //   Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+   // }
 
-    @Given("user enters username and password")
-    public void userEntersUsernameAndPassword() {
-        sale.emailInput.sendKeys(ConfigurationReader.getProperty("email"));
-       sale.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
-       sale.btnButton.click();
+   // @Given("user enters username and password")
+  //  public void userEntersUsernameAndPassword() {
+      //  sale2.loginInput.sendKeys(ConfigurationReader.getProperty("email"));
+      // sale2.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+      // sale.btnButton.click();
 
-    }
+   // }
 
     @Given("user clicks on sale module")
     public void userClicksOnSaleModule() {
@@ -45,7 +47,7 @@ public class SaleFunctionallity_stepDefinitions {
         Assert.assertEquals(expectedTitle,Driver.getDriver().getTitle());
 
     }
-    @Given("user clicks on list button")
+    @Given("user clicks on list button for customers")
     public void user_clicks_on_list_button() {
         sale.listButton.click();
 
@@ -58,7 +60,7 @@ public class SaleFunctionallity_stepDefinitions {
         sale.customerButton.click();
     }
 
-    @Then("user clicks on kanban button")
+    @Then("user clicks on kanban button for customers")
     public void user_clicks_on_kanban_button() {
      sale.kanbanButton.click();
     }
@@ -68,13 +70,13 @@ public class SaleFunctionallity_stepDefinitions {
      Assert.assertTrue(sale.customerDashboard.getText().contains("Customers"));
     }
 
-    @Then("user clicks on forward and backward button")
+    @Then("user clicks on forward and backward button for customers")
     public void user_clicks_on_forward_and_backward_button() {
        sale.nextButton.click();
         BrowserUtils.sleep(5);
         sale.kanbanButton.click();
     }
-    @Then("user click on search input box")
+    @Then("user click on search input box for customers")
     public void user_click_on_search_input_box() {
        sale.getSearchBox.click();
     }
