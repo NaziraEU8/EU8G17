@@ -1,11 +1,10 @@
+@taulant
 Feature: POS Manager should be able to create new Point Of Sale Configuration
   #User story no: TWL-339
 
-  @taulant
   Background: For the following scenarios user is expected to be logged in as POS Manager
   at centrilli and clicked Point of Sale
     Given user is on the centrilli login page
-    Given user enters username and password as sales manager
     Given user enters username and password as POS Manager
     Given user should see Point of Sale on the navigation bar
     Given user clicks on Point of Sale
