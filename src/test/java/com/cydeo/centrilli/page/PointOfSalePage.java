@@ -41,4 +41,41 @@ public class PointOfSalePage extends BasePage{
 
     @FindBy(xpath = "//table/tbody/tr/td[2]")
     public List<WebElement> listOfNamesOfPointsOfSales;
+
+    @FindBy(xpath = "//div[3]/div[3]/button[1]")
+    public WebElement pointOfSaleKaban;
+
+    @FindBy(xpath = "//div[3]/button[2]")
+    public WebElement pointOfSaleList;
+
+    @FindBy(xpath = "//table")
+    public WebElement table;
+
+    @FindBy(xpath = "//div[2]/div[1]/div/div[2]/button[2]")
+    public WebElement discardButton;
+
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> listOfPointOfSale;
+
+    @FindBy(xpath = "//div[1]/div/div[1]/button[1]")
+    public WebElement editButton;
+
+    @FindBy(xpath = "//div/div[1]/button[2]")
+    public WebElement createButton2;
+
+    @FindBy(xpath = "//h1")
+    public WebElement title;
+
+    @FindBy(xpath = "//div[2]/div/div/div/div/div/div[2]/button")
+    public WebElement archiveButton;
+
+    @FindBy(xpath = "//div[2]/div[2]/div/div[3]/button")
+    public WebElement actionButton;
+
+    @FindBy(xpath = "//div[3]/ul/li[1]/a")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "/html/body/div[5]/div/div/div[3]/button[1]/span")
+    public WebElement okButton;
+
 }
