@@ -1,3 +1,4 @@
+@fation
 Feature: POS Manager should be able to create SALES / PRICE LISTS
   As a SALES Manager I should be able to create Price Lists
 
