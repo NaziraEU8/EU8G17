@@ -1,3 +1,5 @@
+
+@fation
 Feature: I should Verify that all buttons work as expected at the employees stage,
   Every button must be functioning at the employees stage while i use the module as a posmanager
 
@@ -31,23 +33,23 @@ Feature: I should Verify that all buttons work as expected at the employees stag
   Scenario: After creating Employee, the "Employee created" message appears under full profile.
     When user clicks on create button
     And user fills minimum requirement field in employee
-    And user clicks save button
+    And user clicks save button in employee
     #Then user should be able to see employee created message
 
 
   Scenario: User should be able to see created employee is listed after clicking the Employees module.
     When user clicks on create button
-    And user fills minimum requirement field
-    And user clicks save button
+    And user fills minimum requirement field in employee
+    And user clicks save button in employee
     And user clicks on employee module
     Then user should be able to see new created employee listed
 
 
     Scenario: User can change the name of the employee, after creating new Employee
       When user clicks on create button
-      And user fills minimum requirement field
-      And user clicks save button
+      And user fills minimum requirement field in employee
+      And user clicks save button in employee
       And user clicks edit button
       And user edits minimum requirements field
-      And user clicks save button
+      And user clicks save button in employee
 
