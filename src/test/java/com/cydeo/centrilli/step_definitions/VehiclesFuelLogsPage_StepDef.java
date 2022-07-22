@@ -44,7 +44,7 @@ public class VehiclesFuelLogsPage_StepDef {
 
     @Then("user clicks on create button")
     public void user_clicks_on_create_button() {
-        vehiclesFuelLogsPage.createButton.click();
+        vehiclesFuelLogsPage.create_Button.click();
     }
 
     @Then("user sees Vehicle Fuel Logs New page")
@@ -92,7 +92,7 @@ public class VehiclesFuelLogsPage_StepDef {
 
     @Then("user clicks on save button")
     public void user_clicks_on_save_button() {
-        vehiclesFuelLogsPage.saveButton.click();
+        vehiclesFuelLogsPage.save_Button.click();
     }
 
     @Then("user fills rest information")

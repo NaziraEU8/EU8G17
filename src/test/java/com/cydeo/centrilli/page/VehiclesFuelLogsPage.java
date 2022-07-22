@@ -17,7 +17,7 @@ public class VehiclesFuelLogsPage extends BasePage {
 
 
     @FindBy(xpath = "//button[@accesskey='c']")
-    public WebElement createButton;
+    public WebElement create_Button;
 
     @FindBy(xpath = "//span[contains(text(),'o_dropdown_button')]")
     public WebElement vehicleDetails;
@@ -100,7 +100,7 @@ public class VehiclesFuelLogsPage extends BasePage {
 
 
     @FindBy(xpath = "//span[contains(text(),'Save')]")
-    public WebElement saveButton;
+    public WebElement save_Button;
 
     @FindBy(name = "odometer")
     public WebElement odometerValue;
