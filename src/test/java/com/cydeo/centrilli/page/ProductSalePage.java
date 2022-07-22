@@ -35,13 +35,7 @@ public class ProductSalePage {
     @FindBy(xpath = "//div[5]/div/div[1]/div/input")
     public WebElement canBeSoldCheckBox;
 
-   // @FindBy(id = "o_field_input_706")
-    public WebElement ProductTypeSelect(String productType){
-        String selectingProductType="o_field_input_706";
-        return Driver.getDriver().findElement(By.id(selectingProductType));
-    }
-
-    @FindBy(xpath = "//table[1]/tbody/tr[2]/td[2]/div/div/input")
+        @FindBy(xpath = "//table[1]/tbody/tr[2]/td[2]/div/div/input")
     public WebElement categorySelected;
 
     @FindBy(xpath = "//table[2]/tbody/tr[1]/td[2]/div/input")
@@ -62,7 +56,7 @@ public class ProductSalePage {
     @FindBy(xpath = "//input[@class='o_searchview_input']")
     public WebElement getSearchBox;
 
-    @FindBy(xpath = "//div[2]/div[1]/ol/li[2]")
+    @FindBy(xpath = "//div/div/div/div[1]/div[2]/strong/span")
     public WebElement TshirtProduct;
 
     @FindBy(xpath = "//div[2]/div/div[3]/button")
@@ -74,6 +68,11 @@ public class ProductSalePage {
     @FindBy(xpath = "//div/div[3]/ul/li[1]/a")
     public WebElement deleteButton;
 
+    @FindBy(xpath = "//div[5]/div[2]/strong/span")
+    public WebElement CarProduct;
+
+    @FindBy(xpath = "/html/body/div[5]/div/div/div[1]/h4/text()")
+    public WebElement DeleteWarining;
 
 
 

@@ -9,12 +9,12 @@ Feature: Creating new Products
      Given user clicks on sale button
 
 
-    @test
     Scenario: User should be able to create new Sales Products
            When user clicks products button
            And user clicks create button
-           And user fills the products data
+           And user enters product name and price
           Then user clicks save button for product
+          Then product can be found in the search
 
 
       Scenario: User should be able to discard changes
@@ -25,7 +25,7 @@ Feature: Creating new Products
         Then user sees the discard is done
 
 
-          @wip
+
         Scenario: User should be able to switch Kanban-List view
           Given user is on product  dashboard
           Then user clicks on kanban button for product
@@ -35,14 +35,13 @@ Feature: Creating new Products
 
 
 
-            @test
+
           Scenario: User should be able to  edit a products
             Given user search for the product
             And user clicks edit button
             And user changes the data
             And user clicks save button
             Then user should see the product edit is done
-
 
 
             Scenario: User should be able to delete a product
