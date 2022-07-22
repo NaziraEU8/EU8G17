@@ -77,7 +77,7 @@ public class EmployeeButton_StepDefinitions {
         Assert.assertTrue(employeeButtonPage.davidEmployeeContact.getText().contains("David"));
     }
 
-    @Then("user clicks on create button")
+    @Then("user clicks on create button on employee")
     public void userClicksOnCreateButton() {
         employeeButtonPage.createButton.click();
 
