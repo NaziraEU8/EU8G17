@@ -22,7 +22,7 @@ Feature: I should Verify that all buttons work as expected at the employees stag
 
 
   Scenario: User should be able to create a new employee contact
-    When user clicks on create button
+    When user clicks on create button on employee
     And user fills all the fields in employee
     And user clicks save button in employee
     Then user should see the new created employee contact
