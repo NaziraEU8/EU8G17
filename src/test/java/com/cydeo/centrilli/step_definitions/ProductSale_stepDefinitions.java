@@ -56,12 +56,17 @@ public class ProductSale_stepDefinitions {
 
 
     }
-
-    @And("user enters product name and price")
-    public void userFillsTheProductsData() throws InterruptedException {
+    @And("user clicks create button on product")
+    public void userClicksCreateButtonOnProduct() throws InterruptedException {
         BrowserUtils.sleep(5);
         productSalePage.createButton.click();
         Thread.sleep(3000);
+
+
+    }
+
+    @And("user enters product name and price")
+    public void userFillsTheProductsData() throws InterruptedException {
 
         //users fill the product data
 
@@ -91,6 +96,7 @@ public class ProductSale_stepDefinitions {
 
     @Then("product can be found in the search")
     public void productCanBeFoundInTheSearch() {
+        BrowserUtils.sleep(5);
    productSalePage.getSearchBox.sendKeys("Tshirt");
 
     }
@@ -103,6 +109,11 @@ public class ProductSale_stepDefinitions {
         Driver.getDriver().findElement(By.xpath("//div[6]/ul[3]/li[1]/a/span")).click();
         Thread.sleep(3000);
     }
+    @Then("user clicks create button for product")
+    public void userClicksCreateButtonForProduct() {
+        BrowserUtils.sleep(5);
+        productSalePage.createButton.click();
+    }
 
 
     @And("user fills the products name")
@@ -113,7 +124,7 @@ public class ProductSale_stepDefinitions {
         Thread.sleep(3000);
     }
 
-    @And("user clicks discard button displayed")
+    @And("user clicks discard button displayed for product")
     public void userClicksDiscardButton() throws InterruptedException {
         Thread.sleep(3000);
 
@@ -121,7 +132,7 @@ public class ProductSale_stepDefinitions {
 
     }
 
-    @Then("user sees the discard is done")
+    @Then("user sees the discard is done for product")
     public void userSeesTheDiscardIsDone() {
         BrowserUtils.sleep(5);
        // Assert.assertTrue(productSalePage.WarningPopUp.isDisplayed());
@@ -156,21 +167,22 @@ public class ProductSale_stepDefinitions {
     }
 
     @And("user should be able to see Kanban list")
-    public void userShouldBeAbleToSeeKanbanList() {
+    public void userShouldBeAbleToSeeKanbanList() throws InterruptedException {
+        Thread.sleep(300);
         BrowserUtils.sleep(5);
-        Assert.assertTrue(basePage.kanbanButton.isEnabled());
+        Assert.assertTrue(productSalePage.kanbanButton.isEnabled());
     }
 
     @Then("user clicks on list button for product")
     public void userClicksOnListButton() throws InterruptedException {
         Thread.sleep(3000);
-        basePage.listButton.click();
+       productSalePage.listButton.click();
     }
 
     @And("user should be able to see list view of products")
     public void userShouldBeAbleToSeeListViewOfProducts() throws InterruptedException {
         Thread.sleep(3000);
-        Assert.assertTrue(basePage.listButton.isEnabled());
+        Assert.assertTrue(productSalePage.listButton.isEnabled());
 
     }
 
@@ -203,23 +215,31 @@ public class ProductSale_stepDefinitions {
        // Assert.assertTrue(productSalePage.TshirtProduct.isDisplayed());
 
     }
-
-
-    @And("user changes the data")
-    public void userChangesTheData() throws InterruptedException {
+    @And("user clicks edit button for product")
+    public void userClicksEditButtonForProduct() {
         BrowserUtils.sleep(5);
         productSalePage.editButton.click();
         BrowserUtils.sleep(5);
+    }
+
+    @And("user changes the data of product")
+    public void userChangesTheDataOfProduct() throws InterruptedException {
         Thread.sleep(3000);
         Driver.getDriver().findElement(By.xpath("//input[@class='o_searchview_input']")).clear();
         Thread.sleep(3000);
+
         BrowserUtils.sleep(40);
 
-     productSalePage.productName.sendKeys("T-shirt");
-
-     BrowserUtils.sleep(5);
-     productSalePage.saveButton.click();
+        productSalePage.productName.sendKeys("T-shirt");
     }
+
+    @And("user clicks save button in product")
+    public void userClicksSaveButtonInProduct() {
+        BrowserUtils.sleep(5);
+        productSalePage.saveButton.click();
+    }
+
+
 
     @Then("user should see the product edit is done")
     public void userShouldSeeTheProductEditIsDone() {
@@ -248,7 +268,7 @@ public class ProductSale_stepDefinitions {
 
 
 
-    @Then("user clicks action button")
+    @Then("user clicks action button on product")
     public void userClicksActionDropbutton() throws InterruptedException {
         Thread.sleep(3000);
       BrowserUtils.sleep(5);
@@ -260,7 +280,7 @@ public class ProductSale_stepDefinitions {
 
     }
 
-    @Then("user should see the confirmation message and clicks ok")
+    @Then("user should see the confirmation message and clicks ok for product")
     public void userShouldSeeTheConfirmationMessageAndCliksOk() {
     BrowserUtils.sleep(2);
 
@@ -268,7 +288,7 @@ public class ProductSale_stepDefinitions {
 
     }
 
-    @And("user clicks ok button")
+    @And("user clicks ok button on product")
     public void userClicksDeleteButton() {
         BrowserUtils.sleep(2);
         Driver.getDriver().findElement(By.xpath("/html/body/div[5]/div/div/div[3]/button[1]/span")).click();
