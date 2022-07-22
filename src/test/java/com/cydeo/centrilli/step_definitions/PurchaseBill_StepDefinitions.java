@@ -1,30 +1,48 @@
 package com.cydeo.centrilli.step_definitions;
 
+import com.cydeo.centrilli.page.PurchaseBillPage;
+import com.cydeo.centrilli.utilities.BrowserUtils;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
-public class PurchaseBill {
+public class PurchaseBill_StepDefinitions {
+    PurchaseBillPage pb = new PurchaseBillPage();
+
     @When("user should be able to click Purchase tab")
     public void user_should_be_able_to_click_purchase_tab() {
+        pb.clickPurchaseTab();
 
     }
     @When("verify the Purchase page is displayed")
     public void verify_the_purchase_page_is_displayed() {
-
+        Assert.assertTrue("Purchase Page is not Displayed",pb.purchasePageIsDisplayed());
     }
     @When("user should be able to click on Create button")
     public void user_should_be_able_to_click_on_create_button() {
-
+        pb.clickCreateBtn();
     }
     @When("user should select {string} and click Add an Item link")
-    public void user_should_select_and_click_add_an_item_link(String string) {
+    public void user_should_select_and_click_add_an_item_link(String vendorName) {
+        pb.selectVendor(vendorName);
+        //BrowserUtils.waitFor(2);
+        //pb.clickCreateBtnAlert();
+        BrowserUtils.waitFor(2);
+        pb.clickAddItem();
+
 
     }
     @When("user should select {string} and add Scheduled Date")
-    public void user_should_select_and_add_scheduled_date(String string) {
+    public void user_should_select_and_add_scheduled_date(String productName) {
+
+        BrowserUtils.waitFor(2);
+        pb.selectProduct(productName);
 
     }
     @When("user should click Save button")
     public void user_should_click_save_button() {
+        BrowserUtils.waitFor(2);
+         pb.clickSaveBtn();
+        BrowserUtils.waitFor(2);
 
     }
     @When("user should verify the Vendor Bill created successfully")
