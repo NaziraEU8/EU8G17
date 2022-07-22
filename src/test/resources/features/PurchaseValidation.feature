@@ -3,6 +3,8 @@ Feature: Manager should be able to create new PURCHASE - Vendor Bill
   @bill
   Scenario Outline: Verify user is able to create a vendor bill
     Given user is in login page
+    When user enters username "posmanager105@info.com" and password "posmanager"
+    And  user click login button
     When user should be able to click Purchase tab
     And  verify the Purchase page is displayed
     And  user should be able to click on Create button
@@ -21,5 +23,5 @@ Feature: Manager should be able to create new PURCHASE - Vendor Bill
     And user should verify vendor bill iis deleted successfully
 
     Examples: Test data
-    |Vendor Name|Product|Vendor Name Two|
-    |ACD(copy)  |[13]Ice Cream|AAAAA    |
+    |Vendor Name|Product      |Vendor Name Two|
+    |AAAAAA     |[312]apple   |AAAAA    |

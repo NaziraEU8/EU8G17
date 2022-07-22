@@ -13,39 +13,39 @@ public class    EmployeeButtonPage extends BasePage {
     }
 
 
-    @FindBy(id = "login")
-    public WebElement loginInput;
+//    @FindBy(id = "login")
+//    public WebElement loginInput;
+//
+//    @FindBy(name = "password")
+//    public WebElement passwordInput;
+//
+//    @FindBy(xpath = "//*[text() = 'Log in']")
+//    public WebElement btnButton;
+//
+//    @FindBy(xpath = "//li[.='#Inbox']")
+//    public WebElement InboxHeader;
+//
+//
+//    @FindBy(xpath = "//button[@data-original-title='List']")
+//    public WebElement listButton;
+//
+//    @FindBy(xpath = "//tr/th[.='Name']")
+//    public WebElement listDisplayed;
+//
+//    @FindBy(xpath = "//button[@data-original-title='Kanban']")
+//    public WebElement kanbanButton;
 
-    @FindBy(name = "password")
-    public WebElement passwordInput;
-
-    @FindBy(xpath = "//*[text() = 'Log in']")
-    public WebElement btnButton;
-
-    @FindBy(xpath = "//li[.='#Inbox']")
-    public WebElement InboxHeader;
-
-
-    @FindBy(xpath = "//button[@data-original-title='List']")
-    public WebElement listButton;
-
-    @FindBy(xpath = "//tr/th[.='Name']")
-    public WebElement listDisplayed;
-
-    @FindBy(xpath = "//button[@data-original-title='Kanban']")
-    public WebElement kanbanButton;
-
-    @FindBy(xpath = "//input[@class='o_searchview_input']")
-    public WebElement searchBox;
-
-
-
-    @FindBy(xpath = "//span[.='David Samson']")
-    public WebElement davidEmployeeContact;
-
-    @FindBy(xpath = "//button[@accesskey='c']")
-    public WebElement createButton;
-
+//    @FindBy(xpath = "//input[@class='o_searchview_input']")
+//    public WebElement searchBox;
+//
+//
+//
+//    @FindBy(xpath = "//span[.='David Samson']")
+//    public WebElement davidEmployeeContact;
+//
+//    @FindBy(xpath = "//button[@accesskey='c']")
+//    public WebElement createButton;
+//
 
 
 }

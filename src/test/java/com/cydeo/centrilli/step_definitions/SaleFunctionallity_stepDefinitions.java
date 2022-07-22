@@ -27,8 +27,8 @@ public class SaleFunctionallity_stepDefinitions {
     @Given("user enters username and password")
     public void userEntersUsernameAndPassword() {
         sale.emailInput.sendKeys(ConfigurationReader.getProperty("email"));
-       sale.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
-       sale.btnButton.click();
+        sale.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        sale.btnButton.click();
 
     }
 
@@ -134,8 +134,6 @@ public class SaleFunctionallity_stepDefinitions {
 
 
     }
-
-
 }
 
 
