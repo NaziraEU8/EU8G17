@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com/cydeo/centrilli/step_definitions",
-        dryRun = false,
+
  
         tags = "@fation"
 

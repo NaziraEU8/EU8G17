@@ -1,7 +1,10 @@
 package com.cydeo.centrilli.page;
 
 import com.cydeo.centrilli.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +19,11 @@ public class PurchaseBillPage {
 
     @FindBy (xpath="//button[contains(text(),'Create')]")
     public WebElement createBtn;
+
+
+    @FindBy (xpath="(//span[contains(text(),'Create')])[1]")
+    public WebElement createBtnAlert;
+
 
     @FindBy (xpath="(//input[@class='o_input ui-autocomplete-input'])[1]")
     public WebElement SelectVendorBox;
@@ -47,6 +55,50 @@ public class PurchaseBillPage {
     @FindBy (xpath = "(//a[contains(text(),'Delete')])[1]")
     public WebElement DeleteBtn;
 
+   @FindBy (xpath = "//div[contains(text(),'Purchase')]")
+    public  WebElement PurchasePageTitle;
+
+    public void clickPurchaseTab(){
+        purchasesTab.click();
+    }
+
+    public boolean purchasePageIsDisplayed(){
+        return  PurchasePageTitle.isDisplayed();
+    }
+
+    public void clickCreateBtn(){
+        createBtn.click();
+    }
+
+    public void selectVendor(String vendor){
+        SelectVendorBox.sendKeys(vendor);
+        SelectVendorBox.sendKeys(Keys.TAB);
+    }
+
+    public void  clickAddItem(){
+//        Actions action = new Actions(Driver.getDriver());
+//        action.doubleClick(AddItemBtn).perform();
+        AddItemBtn.click();
+    }
+
+    public void selectProduct(String product){
+        ProductDropDownBtn.sendKeys(product);
+        ProductDropDownBtn.click();
+
+
+    }
+    public void clickSaveBtn(){
+        Savebtn.click();
+    }
+
+
+    public void clickCreateBtnAlert(){
+        createBtnAlert.click();
+    }
+
+
+    @FindBy(xpath = "//span[contains(text(),'New')])")
+    public WebElement newTexboxTitle;
 
 
 
