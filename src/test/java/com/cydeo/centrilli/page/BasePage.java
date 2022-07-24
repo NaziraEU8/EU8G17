@@ -15,11 +15,13 @@ public class BasePage {
 
 
 
+    @FindBy(xpath = "//li[@id='menu_more_container']")
+    public WebElement moreDropDown;
+
     @FindBy(xpath = "//span[contains(text(),'Fleet')]")
     public WebElement fleetModule;
 
-    @FindBy(xpath = "//li[@id='menu_more_container']")
-    public WebElement moreDropDown;
+
 
 
     @FindBy(xpath ="//*[@id=\"oe_main_menu_navbar\"]/div[2]/ul[1]/li[16]/a/span" )
