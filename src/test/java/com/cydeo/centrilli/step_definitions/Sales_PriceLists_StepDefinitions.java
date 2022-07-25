@@ -182,4 +182,10 @@ public class Sales_PriceLists_StepDefinitions {
         Assert.assertNotEquals(totalNumberOfPriceLists,salesPriceListsPage.selectPriceList.size());
 
     }
+
+    @Given("user is on the centrilli login page")
+    public void userIsOnTheCentrilliLoginPage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
+    }
 }

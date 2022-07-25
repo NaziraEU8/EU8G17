@@ -23,7 +23,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/centrilli/step_definitions",
         dryRun = false,
-        tags = " @TWL-361"
+        tags = "@TWL-367"
 
 )
 public class CukesRunner {
