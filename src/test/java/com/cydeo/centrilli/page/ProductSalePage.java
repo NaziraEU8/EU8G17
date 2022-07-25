@@ -20,6 +20,9 @@ public class ProductSalePage {
     @FindBy(xpath = "/html/body/div[5]/div/div/div[3]/button[1]/span")
     public WebElement OkButton;
 
+    @FindBy(xpath = "/html/body/div[5]/div/div/div[3]/button/span")
+    public WebElement OkButton2;
+
     @FindBy(xpath = "/html/body/div[5]/div/div/div[1]/h4")
     public WebElement WarningPopUp;
 
@@ -29,7 +32,7 @@ public class ProductSalePage {
    @FindBy(xpath = "//div[1]/div/div[2]/button[1]")
    public WebElement saveButton;
 
-    @FindBy(xpath = "//button[accesskey='c']")
+    @FindBy(xpath = "//div[1]/div[2]/div[1]/div/button[1]")
     public WebElement createButton;
 
     @FindBy(xpath = "//div[5]/div/div[1]/div/input")
@@ -38,10 +41,10 @@ public class ProductSalePage {
         @FindBy(xpath = "//table[1]/tbody/tr[2]/td[2]/div/div/input")
     public WebElement categorySelected;
 
-    @FindBy(xpath = "//table[2]/tbody/tr[1]/td[2]/div/input")
+    @FindBy(xpath = "//div/table[2]/tbody/tr[1]/td[2]/div/input")
     public WebElement salePrice;
 
-    @FindBy(xpath = "//tbody/tr[5]/td[2]/div/div/div/input")
+    @FindBy(xpath = "//div[1]/div/table[2]/tbody/tr[5]/td[2]/div/div/div/input")
     public WebElement costPrice;
 
     @FindBy(xpath = "//div[1]/div[2]/div[5]/h1/input")
@@ -72,7 +75,13 @@ public class ProductSalePage {
     public WebElement CarProduct;
 
     @FindBy(xpath = "/html/body/div[5]/div/div/div[1]/h4/text()")
-    public WebElement DeleteWarining;
+    public WebElement DeleteWarning;
+
+    @FindBy(xpath = "//div/table/thead/tr/th[4]/text()")
+    public WebElement NameList;
+
+    @FindBy(xpath = "//div/div[1]/div[2]/strong/span")
+    public WebElement firstProduct;
 
 
 
