@@ -6,6 +6,7 @@ Feature:  As a POS Manager I should be able to create CUSTOMER
   Verify that the user can edit PIPELINE
   Verify that the user can delete PIPELINE
 
+
   Background: For the scenarios in the feature file, user is expected to login before
     Given user is on the centrilli login page
     Given user enters username and password as sales manager

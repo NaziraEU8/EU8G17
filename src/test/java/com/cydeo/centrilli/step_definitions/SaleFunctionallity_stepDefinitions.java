@@ -19,10 +19,10 @@ public class SaleFunctionallity_stepDefinitions {
     String name = faker.name().fullName();
 
 
-    @Given("user is on the centrilli login page")
-    public void userIsOnTheCentrilliLoginPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
+//    @Given("user is on the centrilli login page")
+//    public void userIsOnTheCentrilliLoginPage() {
+//        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+//    }
 
     @Given("user enters username and password")
     public void userEntersUsernameAndPassword() {

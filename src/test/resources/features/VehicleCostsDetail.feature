@@ -13,7 +13,7 @@ Feature: Vehicle Costs Detail Functionality
           And the user clicks the create button
          Then the user lands on Vehicle Costs New page
 
-  @saadet
+
   Scenario:
            When the user clicks the vehicle dropdown-menu
            And the user selects search more option
