@@ -74,11 +74,11 @@ public class ProductSalePage {
     @FindBy(xpath = "//div[5]/div[2]/strong/span")
     public WebElement CarProduct;
 
-    @FindBy(xpath = "/html/body/div[5]/div/div/div[1]/h4/text()")
+    @FindBy(xpath = "/html/body/div[5]/div/div/div[1]/h4")
     public WebElement DeleteWarning;
 
-    @FindBy(xpath = "//div/table/thead/tr/th[4]/text()")
-    public WebElement NameList;
+    @FindBy(xpath = "//div/table/thead/tr/th[1]/div/input")
+    public WebElement NameListBox;
 
     @FindBy(xpath = "//div/div[1]/div[2]/strong/span")
     public WebElement firstProduct;
