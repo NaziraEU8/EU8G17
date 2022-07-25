@@ -97,6 +97,7 @@ public class RepairOrders_StepDefinitions {
     public void types_in_the(String deliveryAddress) {
     repairOrdersPage.deliveryAddress.clear();
     repairOrdersPage.deliveryAddress.sendKeys(deliveryAddress);
+    BrowserUtils.waitFor(5);
     repairOrdersPage.createEditForDeliveryAddress.click();
    // BrowserUtils.waitFor(5);
     repairOrdersPage.saveBtmForDeliveryAddress.click();
