@@ -16,14 +16,14 @@ Feature:   Repair Order Functionality
   Scenario: Clicking create repair order button
     When the user clicks the create button on the repair order page
     Then the user is on new repair order page
-
+  @sa
   Scenario Outline: Creating & Saving repair orders
     Given the user clicks the create button on the repair order page
     And the user is on new repair order page
     And the user types in the "<product to repair>"
     And types in the "<product quantity>" in numbers
     And types in the "<customer>" info
-  #  And types in the "<delivery address>"
+    #And types in the "<delivery address>"
     And types in the "<current location>" as an address
     And types in the "<delivery location>" as final destination
     And types in the "<warranty expiration>" date
