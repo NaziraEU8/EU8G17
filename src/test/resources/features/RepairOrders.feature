@@ -1,4 +1,4 @@
-
+@smoke
 Feature:   Repair Order Functionality
   User Story: As a POS Manager I should be able to create Repair Order
 
