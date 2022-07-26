@@ -35,7 +35,6 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
     And User is able to save
     Then Create button is in the new page is clickable
 
- @taulant
   Scenario: Verify that the user can delete  Point Of Sale
     When Picks a any Point of Sale
     And User clicks action and then delete
