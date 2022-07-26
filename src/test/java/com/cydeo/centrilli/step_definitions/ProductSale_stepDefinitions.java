@@ -269,61 +269,15 @@ public class ProductSale_stepDefinitions {
     }
 
 
-    @Given("user is on product data")
-    public void userIsOnProductData() throws InterruptedException {
-        Thread.sleep(3000);
-        BrowserUtils.sleep(3);
-        Driver.getDriver().findElement(By.xpath("//div[6]/ul[3]/li[1]/a/span")).click();
-        Thread.sleep(3000);
-
-        Thread.sleep(3000);
-        BrowserUtils.sleep(5);
-        Driver.getDriver().findElement(By.xpath("//input[@class='o_searchview_input']")).sendKeys("Tshirt" + Keys.ENTER);
-
-        Thread.sleep(3000);
-        BrowserUtils.sleep(5);
-        Driver.getDriver().findElement(By.xpath("//div/div/div/div[1]/div[2]/strong/span")).click();
-
-    }
 
 
-    @Then("user clicks action button on product")
-    public void userClicksActionDropbutton() throws InterruptedException {
-        Thread.sleep(3000);
-        BrowserUtils.sleep(5);
-        Driver.getDriver().findElement(By.xpath("//div[2]/div/div[3]/button")).click();
-
-        Thread.sleep(3000);
-        BrowserUtils.sleep(5);
-        Driver.getDriver().findElement(By.xpath("//div/div[3]/ul/li[1]/a")).click();
-        BrowserUtils.sleep(5);
-
-    }
-
-    @Then("user should see the confirmation message and clicks ok for product")
-    public void userShouldSeeTheConfirmationMessageAndCliksOk() {
-        BrowserUtils.sleep(5);
-        // Assert.assertTrue(productSalePage.WarningPopUp.isDisplayed());
-
-    }
-
-    @And("user clicks ok button on product")
-    public void userClicksDeleteButton() {
-        BrowserUtils.sleep(5);
-        Driver.getDriver().findElement(By.xpath("/html/body/div[5]/div/div/div[3]/button[1]/span")).click();
-
-    }
 
 
-    @And("user should see the product is deleted")
-    public void userShouldSeeTheProductIsDeleted() throws InterruptedException {
-        BrowserUtils.sleep(5);
-        Thread.sleep(3000);
-        Assert.assertTrue(productSalePage.DeleteWarning.isDisplayed());
-        System.out.println("Product saleable in point sale can not be deleted");
-        BrowserUtils.sleep(5);
-        Driver.getDriver().findElement(By.xpath("/html/body/div[5]/div/div/div[3]/button/span")).click();
-        BrowserUtils.sleep(5);
+
+
+
+
+
 
 
 
@@ -334,5 +288,5 @@ public class ProductSale_stepDefinitions {
 
 
 
-    }
+
 
