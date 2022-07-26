@@ -40,8 +40,12 @@ public class RepairOrdersPage extends BasePage {
 
     @FindBy(xpath = "//div[@name='address_id']/div/input")
     public WebElement deliveryAddress;
-    @FindBy(xpath = "//li/a[text()='Create and Edit...']")
+
+
+    @FindBy(xpath = "//a[contains(text(),'Create and Edit')]")
     public WebElement createEditForDeliveryAddress;
+
+
     @FindBy(xpath = "//button/span[.='Save']")
     public WebElement saveBtmForDeliveryAddress;
 

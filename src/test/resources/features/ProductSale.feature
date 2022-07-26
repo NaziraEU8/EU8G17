@@ -1,3 +1,4 @@
+@smoke
 @TWL-361
 Feature: Creating new Products
   User story: As a POS Manager I should be able to create SALES/Products
