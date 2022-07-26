@@ -1,7 +1,8 @@
 Feature: As a POS Manager I should be able to create  Incoming Product
 
+
   Background: For the followings  scenarios, user is expected to login before
-    Given User  is on the  login page
+    Given User  is on the  login page.
     Given User enters with valid credential as sales manager
     Given User clicks on Purchases module
     Given User clicks on Incoming Products
@@ -21,7 +22,7 @@ Feature: As a POS Manager I should be able to create  Incoming Product
 
 Scenario: Verify that the user can discard changes
   When user clicks on creat button on Incom products list
-  And user fills same requirement field on incom product list
+  And user fills some requirement field on incom product list
   And user clicks on Discard button.
   And user clicks ok on Warning massage
   Then user is able to see discard changes
