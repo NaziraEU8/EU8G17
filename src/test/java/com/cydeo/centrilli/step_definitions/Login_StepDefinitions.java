@@ -23,7 +23,7 @@ public class Login_StepDefinitions {
         //entering email in input box from configuration properties files
         basePage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email"));
 
-        //entering passowrd in input box for cr
+        //entering password in input box for cr
         basePage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password"));
 
         //clicking login button
