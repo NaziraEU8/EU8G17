@@ -9,7 +9,7 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
     And user clicks on Point of Sale on the Navigation Bar
     Then user clicks Point of Sale on the Dashboard
 
-  @taulant
+ 
   Scenario: Verification of POS Manager being able to create new  Point Of Sale
     When User clicks create button
     And User fills at least the minimum required field with information
@@ -35,7 +35,7 @@ Feature: POS Manager should be able to create new Point Of Sale Configuration
     And User is able to save
     Then Create button is in the new page is clickable
 
-
+ @taulant
   Scenario: Verify that the user can delete  Point Of Sale
     When Picks a any Point of Sale
     And User clicks action and then delete
