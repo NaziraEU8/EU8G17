@@ -90,15 +90,15 @@ public class RepairOrders_StepDefinitions {
     repairOrdersPage.createEditForCustomer.click();
      BrowserUtils.waitFor(5);
     repairOrdersPage.saveBtmForCustomer.click();
-   // BrowserUtils.waitFor(3);
+     BrowserUtils.waitFor(3);
 
     }
     @Given("types in the {string}")
     public void types_in_the(String deliveryAddress) {
     repairOrdersPage.deliveryAddress.clear();
-    repairOrdersPage.deliveryAddress.sendKeys(deliveryAddress);
-    BrowserUtils.waitFor(5);
-    repairOrdersPage.createEditForDeliveryAddress.click();
+  //   repairOrdersPage.deliveryAddress.sendKeys(deliveryAddress);
+  //  BrowserUtils.waitFor(5);
+  //  repairOrdersPage.createEditForDeliveryAddress.click();
      BrowserUtils.waitFor(5);
 
    repairOrdersPage.saveCreateEditS.click();
@@ -135,6 +135,7 @@ public class RepairOrders_StepDefinitions {
     }
     @Then("a new repair order is created")
     public void a_new_repair_order_is_created() {
+        BrowserUtils.waitFor(5);
     repairOrdersPage.editBTM.isDisplayed();
         BrowserUtils.waitFor(5);
     }
