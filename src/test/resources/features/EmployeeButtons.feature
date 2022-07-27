@@ -1,5 +1,6 @@
+@smoke
+  @regression
 
-@fation
 Feature: I should Verify that all buttons work as expected at the employees stage,
   Every button must be functioning at the employees stage while i use the module as a posmanager
 

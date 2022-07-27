@@ -1,3 +1,5 @@
+@smoke
+@regression
 @test
 Feature:Sale Functionality
   As a Sales Manager, I should be able to create and edit a new customer from "Sales" module
