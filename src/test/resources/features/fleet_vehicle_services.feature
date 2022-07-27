@@ -8,14 +8,14 @@ Feature: Centrilli app vehicles services log feature
     Given user should see inbox page
     Then user click in Fleet module
 
-@wip
+
   Scenario: create new Vehicle Service Log
     When user click in create button
     And User fill the field with information
     And user click save button
     Then user verify pages title
 
-
+  @vilson
   Scenario: create new Vehicle Service Log by clicking discard
     When user save the amount of vehicle services
     And user click in create button
