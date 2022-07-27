@@ -25,10 +25,11 @@ public class Login_StepDefinitions {
     public void userEntersUsernameAndPassword(String username, String password) {
 
         //entering email in input box from configuration properties files
-        loginPage.emailInputBox.sendKeys(username);
-        //entering passowrd in input box for cr
-        loginPage.passwordInputBox.sendKeys(password);
 
+        basePage.emailInputBox.sendKeys(ConfigurationReader.getProperty("email"));
+
+        //entering password in input box for cr
+        basePage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("password"));
 
 
     }
