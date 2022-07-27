@@ -35,7 +35,9 @@ public class CustomerCreatePage {
     public WebElement editButton;
 
     public WebElement findingCustomer(String Anna) {
+
         String element ="html/body/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/ul/li[1]";
+
         return Driver.getDriver().findElement(By.xpath(element));
     }
 
@@ -51,16 +53,16 @@ public class CustomerCreatePage {
     @FindBy(id = "o_field_input_658")
     public WebElement streetInput;
 
-    @FindBy(id = "o_field_input_666")
+    @FindBy(xpath = "//div[4]/table[2]/tbody/tr[1]/td[2]/input")
     public WebElement getJobPosition;
 
-    @FindBy(id = "o_field_input_667")
+    @FindBy(xpath = "//div[4]/table[2]/tbody/tr[2]/td[2]/div/input")
     public WebElement phoneInput;
 
     @FindBy(id = "o_field_input_655")
     public WebElement getCompanyBox;
 
-    @FindBy(css = ".o_form_button_edit")
+    @FindBy(xpath = "//div[2]/div[1]/div[2]/div[1]/div/div[1]/button[1]")
     public WebElement EditButton;
 
     @FindBy(css = ".o_form_button_save")
