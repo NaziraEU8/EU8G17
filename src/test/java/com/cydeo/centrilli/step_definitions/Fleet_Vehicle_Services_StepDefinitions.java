@@ -85,7 +85,7 @@ public class  Fleet_Vehicle_Services_StepDefinitions {
 
     @When("user save the amount of vehicle services")
     public void userSaveTheAmountOfVehicleServices() {
-     BrowserUtils.sleep(3);
+     BrowserUtils.sleep(5);
      totalServices=vehicleServicesCreatePage.totalAmountOfServices.getText();
     }
 
