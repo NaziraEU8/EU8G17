@@ -14,11 +14,11 @@ public class EmployeeButton_StepDefinitions {
 
     EmployeeButtonPage employeeButtonPage = new EmployeeButtonPage();
 
-    @Given("user is on the centrilli login page")
+    @Given("user is on the centrilli login page fation")
     public void user_is_on_the_centrilli_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
-    @Given("user enters username and password")
+    @Given("user enters username and password fation")
     public void user_enters_username_and_password() {
         employeeButtonPage.loginInput.sendKeys(ConfigurationReader.getProperty("email"));
         employeeButtonPage.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
@@ -43,7 +43,7 @@ public class EmployeeButton_StepDefinitions {
         Assert.assertEquals(expectedTitle,Driver.getDriver().getTitle());
     }
 
-    @And("user clicks on list button")
+    @And("user clicks on list button on employee")
     public void userClicksOnListButton() {
         employeeButtonPage.listButton.click();
     }
@@ -53,13 +53,13 @@ public class EmployeeButton_StepDefinitions {
         Assert.assertTrue(employeeButtonPage.listDisplayed.isDisplayed());
     }
 
-    @And("user clicks on kanban button")
+    @And("user clicks on kanban button on employee")
     public void userClicksOnKanbanButton() {
         BrowserUtils.sleep(3);
         employeeButtonPage.kanbanButton.click();
     }
 
-    @And("user clicks on search input box")
+    @And("user clicks on search input box on employee")
     public void userClicksOnSearchInputBox() {
         BrowserUtils.sleep(3);
         employeeButtonPage.searchBox.click();
@@ -77,13 +77,11 @@ public class EmployeeButton_StepDefinitions {
         Assert.assertTrue(employeeButtonPage.davidEmployeeContact.getText().contains("David"));
     }
 
-    @Then("user clicks on create button")
+    @Then("user clicks on create button on employee")
     public void userClicksOnCreateButton() {
         employeeButtonPage.createButton.click();
 
     }
-
-
 
 
 

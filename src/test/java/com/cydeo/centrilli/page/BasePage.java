@@ -13,17 +13,32 @@ public class BasePage {
     }
 
 
-    @FindBy(id = "login")
-    public WebElement emailInputBox;
 
 
-    @FindBy(name = "password")
-    public WebElement passwordInputBox;
+    @FindBy(xpath = "//li[@id='menu_more_container']")
+    public WebElement moreDropDown;
 
-    @FindBy(xpath= "//button[.='Log in']")
-    public WebElement loginButton;
+    @FindBy(xpath = "//span[contains(text(),'Fleet')]")
+    public WebElement fleetModule;
+
+
 
 
     @FindBy(xpath ="//*[@id=\"oe_main_menu_navbar\"]/div[2]/ul[1]/li[16]/a/span" )
     public WebElement employeeButton;
+
+    @FindBy(xpath = "//span[.='Inbox']")
+    public WebElement inboxButton;
+
+    @FindBy(xpath = "//span[.='\n" +
+            "                Sales\n" +
+            "            ']")
+    public WebElement salesModule;
+
+    @FindBy(xpath = "//span[contains(text(),'CRM')]")
+    public WebElement CRMModule;
+
+    @FindBy(xpath = "//span[contains(text(),'Purchases')]")
+    public WebElement PurchasesModule;
+
 }

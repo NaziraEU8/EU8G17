@@ -1,15 +1,15 @@
 package com.cydeo.centrilli.utilities;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 import org.junit.Assert;
 
 
@@ -477,6 +477,26 @@ import java.util.Set;
          */
         public static void waitForPresenceOfElement(By by, long time) {
             new WebDriverWait(Driver.getDriver(), time).until(ExpectedConditions.presenceOfElementLocated(by));
+        }
+
+        //Select a random web element from a list of web elements
+        public static WebElement selectRandomElementFromTable(List<WebElement> listWebElements){
+
+            Random random=new Random();
+            int index=random.nextInt(listWebElements.size());
+
+            return listWebElements.get(index);
+
+
+        }
+
+        //return a random number within the given edges
+
+        public static int randomNumber(int bound){
+            Random random =new Random();
+            return random.nextInt(bound);
+
+
         }
 
 
