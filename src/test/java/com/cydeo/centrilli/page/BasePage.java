@@ -38,4 +38,7 @@ public class BasePage {
     @FindBy(xpath = "//span[contains(text(),'CRM')]")
     public WebElement CRMModule;
 
+    @FindBy(xpath = "//span[contains(text(),'Purchases')]")
+    public WebElement PurchasesModule;
+
 }
