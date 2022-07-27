@@ -88,9 +88,9 @@ public class RepairOrders_StepDefinitions {
     public void types_in_the_info(String customerInfo) {
     repairOrdersPage.customerInfo.sendKeys(customerInfo);
     repairOrdersPage.createEditForCustomer.click();
-    BrowserUtils.waitFor(5);
+     BrowserUtils.waitFor(5);
     repairOrdersPage.saveBtmForCustomer.click();
-    BrowserUtils.waitFor(3);
+   // BrowserUtils.waitFor(3);
 
     }
     @Given("types in the {string}")
@@ -99,9 +99,11 @@ public class RepairOrders_StepDefinitions {
     repairOrdersPage.deliveryAddress.sendKeys(deliveryAddress);
     BrowserUtils.waitFor(5);
     repairOrdersPage.createEditForDeliveryAddress.click();
-   // BrowserUtils.waitFor(5);
-    repairOrdersPage.saveBtmForDeliveryAddress.click();
-   // BrowserUtils.waitFor(3);
+     BrowserUtils.waitFor(5);
+
+   repairOrdersPage.saveCreateEditS.click();
+   BrowserUtils.waitFor(3);
+
     }
 
 
