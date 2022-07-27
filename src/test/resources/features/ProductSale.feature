@@ -1,3 +1,4 @@
+@smoke
 @TWL-361
 Feature: Creating new Products
   User story: As a POS Manager I should be able to create SALES/Products
@@ -45,13 +46,6 @@ Feature: Creating new Products
             Then user should see the product edit is done
 
 
-             @TWL-353
-            Scenario: User should be able to delete a product
-              Given user is on product data
-              Then user clicks action button on product
-              And user clicks ok button on product
-              Then user should see the confirmation message and clicks ok for product
-              And user should see the product is deleted
 
 
 
