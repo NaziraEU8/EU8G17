@@ -32,7 +32,7 @@ public class EmployeeButton_StepDefinitions {
 
     @And("user clicks on employee module")
     public void userClicksOnEmployeeModule() {
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(3);
         employeeButtonPage.employeeButton.click();
     }
 
