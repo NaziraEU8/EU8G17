@@ -24,4 +24,4 @@ Feature: Manager should be able to create new PURCHASE - Vendor Bill
 
     Examples: Test data
     |Vendor Name|Product      |Vendor Name Two|
-    |AAAAAA     |[312]apple   |AAAAA    |
+    |Abata    |[312]apple   | ACD(copy)   |

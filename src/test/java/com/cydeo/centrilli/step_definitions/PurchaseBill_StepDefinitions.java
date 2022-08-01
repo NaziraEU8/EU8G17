@@ -23,12 +23,14 @@ public class PurchaseBill_StepDefinitions {
     }
     @When("user should select {string} and click Add an Item link")
     public void user_should_select_and_click_add_an_item_link(String vendorName) {
+        BrowserUtils.waitFor(2);
+
         pb.selectVendor(vendorName);
-        //BrowserUtils.waitFor(2);
-        //pb.clickCreateBtnAlert();
+        BrowserUtils.waitFor(2);
+        pb.AbataData.click();
         BrowserUtils.waitFor(2);
         pb.clickAddItem();
-
+        //pb.clickTab();
 
     }
     @When("user should select {string} and add Scheduled Date")
@@ -40,7 +42,7 @@ public class PurchaseBill_StepDefinitions {
     }
     @When("user should click Save button")
     public void user_should_click_save_button() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
          pb.clickSaveBtn();
         BrowserUtils.waitFor(2);
 

@@ -19,21 +19,22 @@ public class SaleFunctionallity_stepDefinitions {
     String name = faker.name().fullName();
 
 
-//    @Given("user is on the centrilli login page")
-//    public void userIsOnTheCentrilliLoginPage() {
-//        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-//    }
+    @Given("user is on the login page for sale functionality")
+    public void userIsOnTheLoginPageForSaleFunctionality() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+    }
 
-    @Given("user enters username and password")
-    public void userEntersUsernameAndPassword() {
+    @Given("user enters username and password to login")
+    public void userEntersUsernameAndPasswordToLogin() {
         sale.emailInput.sendKeys(ConfigurationReader.getProperty("email"));
-       sale.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
-       sale.btnButton.click();
+        sale.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        sale.btnButton.click();
 
     }
 
-    @Given("user clicks on sale module")
-    public void userClicksOnSaleModule() {
+    @Given("user clicks on sale module for customer dashboard")
+    public void userClicksOnSaleModuleForCustomerDashboard() {
+
         BrowserUtils.sleep(2);
         sale.getSaleButton.click();
     }
@@ -107,33 +108,32 @@ public class SaleFunctionallity_stepDefinitions {
     @When("user clicks import button")
     public void userClicksImportButton() {
         BrowserUtils.sleep(4);
-        //String filepath="\u202AC:\\Users\\admin\\Desktop";
-        //sale.importButton.sendKeys(filepath);
-        String filePath2="\u202AC:\\Users\\admin\\Desktop\\SampleData.xlsx";
+
         sale.importButton.click();
-      sale.importButton.sendKeys(filePath2);
-
-    }
-
-    @And("user clicks load a file button")
-    public void userClicksLoadAFileButton() {
-        BrowserUtils.sleep(3);
-        sale.loadFileButton.click();
-
     }
 
     @And("user chooses the file to import")
     public void userChoosesTheFileToImport() {
-
+         BrowserUtils.sleep(5);
+        String filePath2="\u202AC:\\Users\\admin\\Desktop\\SampleData.xlsx";
+        sale.ImportBox.sendKeys(filePath2);
+    }
+    @And("user clicks load a file button")
+    public void userClicksLoadAFileButton() {
+        BrowserUtils.sleep(5);
+    sale.loadFileButton.click();
 
     }
 
     @Then("user should see the file is imported")
     public void userShouldSeeTheFileIsImported() {
-       sale.importButton.click();
+        String filePath2="Import a File - Odoo";
+
+      Assert.assertEquals(filePath2,Driver.getDriver().getTitle());
 
 
     }
+
 
 
 }
