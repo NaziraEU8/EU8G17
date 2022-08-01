@@ -47,7 +47,7 @@ public class Login_StepDefinitions {
 
     //Saadet login step definitions
 
-    @When("the user is on the login page_sa")
+    @When("the user is on the login page")
     public void the_user_is_on_the_login_page_sa() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
