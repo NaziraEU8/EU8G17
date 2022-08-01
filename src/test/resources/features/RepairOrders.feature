@@ -1,4 +1,4 @@
-@sa
+@TWL-341  @smoke
 Feature:   Repair Order Functionality
   User Story: As a POS Manager I should be able to create Repair Order
 
@@ -8,15 +8,15 @@ Feature:   Repair Order Functionality
     And the user sees the dashboard
     And the user clicks the Repairs module
     Then the user is on the repair order page
-
+@TWL-348
   Scenario: Kanban view of repairs
     When the user clicks the kanban button
     Then the user views the repair orders in kanban format
-
+@TWL-368
   Scenario: Clicking create repair order button
     When the user clicks the create button on the repair order page
     Then the user is on new repair order page
-
+@TWL-369
   Scenario Outline: Creating & Saving repair orders
     Given the user clicks the create button on the repair order page
     And the user is on new repair order page

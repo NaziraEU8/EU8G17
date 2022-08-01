@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
+                ""
 
 
 
@@ -21,7 +22,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/cydeo/centrilli/step_definitions",
         dryRun = false,
-        tags = "@wip"
+        tags = "@smoke"
 
 )
 public class CukesRunner {
