@@ -3,7 +3,7 @@ Feature:   Repair Order Functionality
   User Story: As a POS Manager I should be able to create Repair Order
 
   Background:
-    Given the user is on the login page_sa
+    Given the user is on the login page
     And the user logins with valid username and password
     And the user sees the dashboard
     And the user clicks the Repairs module

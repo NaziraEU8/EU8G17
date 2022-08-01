@@ -1,4 +1,4 @@
-@koc
+
 Feature: As a user I should Verify that I can create a new Odometer function
 
   Background: For the scenarios in the feature file, user is expected to login before
