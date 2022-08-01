@@ -24,8 +24,9 @@ public class BasePage {
 
 
 
-    @FindBy(xpath ="//*[@id=\"oe_main_menu_navbar\"]/div[2]/ul[1]/li[16]/a/span" )
+    @FindBy(xpath ="//div[2]/ul[1]/li[16]/a/span" )
     public WebElement employeeButton;
+    ////*[@id="oe_main_menu_navbar"]/div[2]/ul[1]/li[16]/a/span
 
     @FindBy(xpath = "//span[.='Inbox']")
     public WebElement inboxButton;

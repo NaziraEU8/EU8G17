@@ -1,5 +1,6 @@
 package com.cydeo.centrilli.page;
 
+import com.cydeo.centrilli.utilities.BrowserUtils;
 import com.cydeo.centrilli.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -62,6 +63,12 @@ public class PurchaseBillPage {
         purchasesTab.click();
     }
 
+    @FindBy(xpath="//a[contains(text(),'[312] apple')]")
+    public  WebElement Data312;
+
+    @FindBy(xpath="//a[contains(text(),'Abata')]")
+    public  WebElement AbataData;
+
     public boolean purchasePageIsDisplayed(){
         return  PurchasePageTitle.isDisplayed();
     }
@@ -69,10 +76,12 @@ public class PurchaseBillPage {
     public void clickCreateBtn(){
         createBtn.click();
     }
-
+    public void clickTab(){
+        SelectVendorBox.sendKeys(Keys.TAB);
+    }
     public void selectVendor(String vendor){
         SelectVendorBox.sendKeys(vendor);
-        SelectVendorBox.sendKeys(Keys.TAB);
+        ///SelectVendorBox.sendKeys(Keys.TAB);
     }
 
     public void  clickAddItem(){
@@ -83,7 +92,13 @@ public class PurchaseBillPage {
 
     public void selectProduct(String product){
         ProductDropDownBtn.sendKeys(product);
-        ProductDropDownBtn.click();
+//        Actions pressBtn= new Actions(Driver.getDriver());
+//        pressBtn.sendKeys(Keys.chord(Keys.SPACE)).perform();
+//        pressBtn.sendKeys(Keys.chord(Keys.ENTER)).perform();
+
+        Data312.click();
+        BrowserUtils.waitFor(2);
+
 
 
     }
