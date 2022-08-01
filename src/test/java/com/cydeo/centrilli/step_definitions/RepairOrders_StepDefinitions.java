@@ -96,10 +96,10 @@ public class RepairOrders_StepDefinitions {
     @Given("types in the {string}")
     public void types_in_the(String deliveryAddress) {
     repairOrdersPage.deliveryAddress.clear();
-  //   repairOrdersPage.deliveryAddress.sendKeys(deliveryAddress);
-  //  BrowserUtils.waitFor(5);
-  //  repairOrdersPage.createEditForDeliveryAddress.click();
-     BrowserUtils.waitFor(5);
+//    repairOrdersPage.deliveryAddress.sendKeys(deliveryAddress);
+//    BrowserUtils.waitFor(5);
+//    repairOrdersPage.createEditForDeliveryAddress.click();
+//    BrowserUtils.waitFor(5);
 
    repairOrdersPage.saveCreateEditS.click();
    BrowserUtils.waitFor(3);
